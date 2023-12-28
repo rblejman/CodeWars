@@ -49,3 +49,10 @@ function greet(name, owner) {
 }
 console.log(greet("Daniel", "Daniel"), "Hello boss");
 console.log(greet("Greg", "Daniel"), "Hello guest");
+
+// kata n4 <----
+// Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+function removeExclamationMarks(s) {
+  return s.replaceAll("!", "");
+}
