@@ -16,3 +16,36 @@ function areYouPlayingBanjo(name) {
 }
 
 console.log(areYouPlayingBanjo("odrigo"));
+
+// Kata n2 <----
+// If you can't sleep, just count sheep!!
+
+// Task:
+// Given a non-negative integer, 3 for example,
+// return a string with a murmur: "1 sheep...2 sheep...3 sheep...".
+//Input will always be valid, i.e. no negative integers.
+
+let countSheep = function (num) {
+  let murmur = "";
+  for (let index = 1; index <= num; index++) {
+    murmur += `${index} sheep...`;
+  }
+  console.log(murmur);
+};
+
+countSheep(3);
+
+//Kata n3 <----
+// Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+
+// Use conditionals to return the proper message:
+
+// case	return
+// name equals owner	'Hello boss'
+// otherwise	'Hello guest'
+
+function greet(name, owner) {
+  return name === owner ? "Hello boss" : "Hello guest";
+}
+console.log(greet("Daniel", "Daniel"), "Hello boss");
+console.log(greet("Greg", "Daniel"), "Hello guest");
