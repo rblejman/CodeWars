@@ -24,6 +24,28 @@ console.log(arrayPlusArray([1, 2, 3], [4, 5, 6]), 21);
 
 function gooseFilter(birds) {
   var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-
-  // return an array containing all of the strings in the input array except those that match strings in geese
+  let newBirds = birds;
+  geese.forEach((item) => {
+    newBirds = newBirds.filter((bird) => bird != item);
+  });
+  return newBirds;
 }
+
+console.log(
+  gooseFilter([
+    "Mallard",
+    "Hook Bill",
+    "African",
+    "Crested",
+    "Pilgrim",
+    "Toulouse",
+    "Blue Swedish",
+  ]),
+  ["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
+);
+
+// A BETTER SOLUTION
+// function gooseFilter (birds) {
+//     var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+//     return birds.filter(b => !geese.includes(b));
+//   }
