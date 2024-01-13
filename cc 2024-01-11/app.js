@@ -38,6 +38,26 @@ findSmallestInt(args) {
 function litres(time) {
   return Math.floor(time * 0.5);
 }
-
+console.log("Kata 2");
 console.log(litres(12.3), "Answer:", 6);
 console.log(litres(0.82), "Answer:", 0);
+
+//Kata 3 <-------------
+/*
+Can you find the needle in the haystack?
+
+Write a function findNeedle() that takes an array full of junk but containing one "needle"
+
+After your function finds the needle it should return a message (as a string) that says:
+
+"found the needle at position " plus the index it found the needle, so:
+
+Example(Input --> Output)
+
+["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5" 
+*/
+
+function findNeedle(haystack) {
+  let position = haystack.findIndex((e) => e == "needle");
+  return `found the needle at position ${position}`;
+}
