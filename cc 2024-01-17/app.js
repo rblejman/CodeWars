@@ -27,3 +27,47 @@ function past(h, m, s) {
 
 console.log(past(0, 1, 1), 61000);
 console.log(past(1, 1, 1), 3661000);
+
+// Kata 2 <---------------------
+/*
+Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
+invert([]) == []
+You can assume that all values are integers. Do not mutate the input array/list.
+*/
+
+function invert(array) {
+  return array.map((e) => -e);
+}
+
+console.log(invert([1, 2, 3, 4, 5]), [-1, -2, -3, -4, -5]);
+
+// Kata 3 <-------
+/*
+Write function bmi that calculates body mass index (bmi = weight / height2).
+
+if bmi <= 18.5 return "Underweight"
+
+if bmi <= 25.0 return "Normal"
+
+if bmi <= 30.0 return "Overweight"
+
+if bmi > 30 return "Obese"
+ */
+
+function bmi(weight, height) {
+  let mass = weight / height ** 2;
+  if (mass <= 18.5) {
+    return "Underweight";
+  } else if (mass <= 25.0) {
+    return "Normal";
+  } else if (mass <= 30) {
+    return "Overweight";
+  } else {
+    return "Obese";
+  }
+}
+
+console.log(bmi(80, 1.8), "Normal");
