@@ -71,7 +71,8 @@ const rps = (p1, p2) => {
   }
 };
 
-// Another way with objects
+// Another way with objects.
+// Uses the object and p1 is the key to the value. So you just compare the condition that p2 has to be equal for p1 to wing
 /*
 const rps = (p1, p2) => {
   if (p1 === p2) return "Draw!";
@@ -84,3 +85,23 @@ const rps = (p1, p2) => {
   }
 };
 */
+
+// kata 5 <----
+/*
+Write a function named setAlarm/set_alarm/set-alarm/setalarm (depending on language) which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
+
+The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. Examples:
+
+employed | vacation 
+true     | true     => false
+true     | false    => true
+false    | true     => false
+false    | false    => false
+*/
+function setAlarm(employed, vacation) {
+  if (employed && !vacation) {
+    return true;
+  } else {
+    return false;
+  }
+}
