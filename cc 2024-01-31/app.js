@@ -105,3 +105,50 @@ function setAlarm(employed, vacation) {
     return false;
   }
 }
+
+// kata 6 <----
+/*
+You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to green again.
+
+Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.
+
+For example, when the input is green, output should be yellow.
+*/
+
+function updateLight(current) {
+  let answer;
+  switch (current) {
+    case "green":
+      answer = "yellow";
+      break;
+    case "red":
+      answer = "green";
+      break;
+    case "yellow":
+      answer = "red";
+      break;
+
+    default:
+      break;
+  }
+  return answer;
+}
+
+// kata 7
+/*
+Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+Example:
+["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+None of the arrays will be empty, so you don't have to worry about that!
+*/
+function removeEveryOther(arr) {
+  var newArr = [];
+  for (var i = 0; i < arr.length; i += 2) {
+    newArr.push(arr[i]);
+  }
+  return newArr;
+}
+console.log("remove any other");
+console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), [1, 3, 5, 7, 9]);
