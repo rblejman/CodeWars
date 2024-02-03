@@ -21,3 +21,26 @@ function enough(cap, on, wait) {
 
 console.log(enough(10, 5, 5), 0);
 console.log(enough(100, 60, 50), 10);
+
+// kata 2 <---
+/*
+You are given two sorted arrays that both only contain integers. Your task is to find a way to merge them into a single one, sorted in asc order. Complete the function mergeArrays(arr1, arr2), where arr1 and arr2 are the original sorted arrays.
+
+You don't need to worry about validation, since arr1 and arr2 must be arrays with 0 or more Integers. If both arr1 and arr2 are empty, then just return an empty array.
+
+Note: arr1 and arr2 may be sorted in different orders. Also arr1 and arr2 may have same integers. Remove duplicated in the returned result.
+*/
+function mergeArrays(arr1, arr2) {
+  if (arr1.length > 0 && arr2.length > 0) {
+    arr1.forEach((el, index) => {
+      arr2.filter(e);
+    });
+  } else {
+    return 0;
+  }
+}
+
+console.log(
+  mergeArrays([1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12]),
+  [1, 2, 3, 4, 5, 7, 9, 10, 11, 12]
+);
